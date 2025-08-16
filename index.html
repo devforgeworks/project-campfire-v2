@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project Campfire</title>
+  </head>
+  <body>
+    <!-- Wrappar hela fönstret -->
+    <div class="windowWrapper">
+      <h1>Project Campfire v.2.0</h1>
+      <p>
+        This is an updated version from v1.0. More functions & new UI. Before
+        starting new round, flip card and increase stats, max 5 total points.
+        <br />
+        Healing spell (+5 hp) avalible every 5th dice roll. Added 5hp back every
+        round. Added function to not be able to spam click dice.
+        <br />
+        Added combat log enteries to be handled in a seperate function. And
+        bonus calculations for STR, DEX, etc..
+      </p>
+
+      <p></p>
+      <!-- Wrappar själva spelet ink. combat log samt items box -->
+      <div class="gameWrapper">
+        <!-- Spelfönstret med kort -->
+        <div class="gameWindow">
+          <!-- Håller allt som har med player card att göra. Båda sidorna. -->
+
+          <div class="turnContainer">
+            <p id="whoTurn"></p>
+          </div>
+
+          <div class="dice-container">
+            <button class="diceBtn" id="dice">20</button>
+          </div>
+
+          <div class="counter-container">
+            <h3>Round:</h3>
+            <h3 id="roundCounter"></h3>
+          </div>
+
+          <div class="newRound-container">
+            <button class="btn" id="newRound">New Round</button>
+          </div>
+
+          <div class="reset-container">
+            <button class="btn" id="resetBtn">Restart</button>
+          </div>
+
+          <article class="playerCard">
+            <div class="gameCard playerCard1" id="pCard1">
+              <section class="name">
+                <p id="playerName">Rathoz</p>
+              </section>
+
+              <section class="playerMainStats">
+                <div class="playerHealth">
+                  <p>HP</p>
+                  <div id="pHealth"></div>
+                </div>
+
+                <div class="playerAC">
+                  <p>AC</p>
+                  <div id="pAC"></div>
+                </div>
+              </section>
+
+              <button class="btn" id="playerCardFlip1">FLIP ME</button>
+            </div>
+
+            <div class="gameCard playerCard2" id="pCard2">
+              <section class="name">
+                <p id="playerName">Rathoz</p>
+              </section>
+
+              <section class="playerMainStats">
+                <div class="playerStr">
+                  <p>STR</p>
+                  <div id="pStr"></div>
+                  <button class="abBtn" id="incStr">+</button>
+                </div>
+
+                <div class="playerDex">
+                  <p>DEX</p>
+                  <div id="pDex"></div>
+                  <button class="abBtn" id="incDex">+</button>
+                </div>
+
+                <div class="playerInt">
+                  <p>INT</p>
+                  <div id="pInt"></div>
+                  <button class="abBtn" id="incInt">+</button>
+                </div>
+
+                <div class="playerVit">
+                  <p>VIT</p>
+                  <div id="pVit"></div>
+                  <button class="abBtn" id="incVit">+</button>
+                </div>
+              </section>
+
+              <button class="btn" id="playerCardFlip2">FLIP ME</button>
+            </div>
+          </article>
+
+          <!-- Håller allt som har med enemycard att göra. Båda sidor -->
+          <article class="enemyCard">
+            <div class="gameCard enemyCard1" id="eCard1">
+              <section class="name">
+                <p id="enemyName">Enemy</p>
+              </section>
+
+              <section class="enemyMainStats">
+                <div class="enemyHP">
+                  <p>HP</p>
+                  <p id="eHp"></p>
+                </div>
+
+                <div class="enemyAC">
+                  <p>AC</p>
+                  <p id="eAc"></p>
+                </div>
+              </section>
+
+              <button class="btn" id="enemyCardFlip1">FLIP ME</button>
+            </div>
+
+            <div class="gameCard enemyCard2" id="eCard2">
+              <section class="name" id="enemyStats">
+                <p>Enemy</p>
+              </section>
+
+              <section class="enemyMainStats">
+                <p>STR</p>
+                <p>DEX</p>
+                <p>INT</p>
+                <p>VIT</p>
+              </section>
+
+              <button class="btn" id="enemyCardFlip2">FLIP ME</button>
+            </div>
+          </article>
+        </div>
+        <!-- Wrappar items och combat log -->
+        <div class="barWrapper">
+          <div class="itemBox">
+            <div class="items">
+              <h3>ITEMS</h3>
+            </div>
+            <div class="spells">
+              <h3>SPELLS</h3>
+              <button class="btn" id="healSpell">HEAL</button>
+            </div>
+          </div>
+          <div id="comLog"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

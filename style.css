@@ -1,0 +1,200 @@
+/* Colors */
+/* Black: #050505 */
+/* Eerie black:#242322  */
+/* Smoky black: #090705 */
+/* White: #F2F4F3 */
+/* Russet: #8C4E22 */
+/* Night: #151412 */
+
+body{
+    margin:0;
+    padding: 0;
+    color: white;
+}
+
+.windowWrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #050505  ;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.windowWrapper h1{
+    margin-bottom:0;
+    margin-top: 0;
+    text-decoration: underline;
+    
+}
+
+.gameWrapper{
+    height: 70%;
+    width: 75%;
+    background-color: black;
+    display: felx;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.gameWindow{
+    height: 70%;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: #151412;
+    border: 10px inset #8c4e22;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.barWrapper{
+    height:30%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: 10px inset #8c4e22;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+
+.itemBox{
+    height: 100%;
+    width: 60%;
+    background-color:#242322;
+    border-right: 10px inset #8c4e22;
+    display:flex;
+    justify-content: space-around;
+    
+}
+
+#comLog{
+    height:100%;
+    width: 40%;
+    background-color: #242322;
+    overflow-y: scroll;
+    
+    
+}
+
+.dice-container{
+    grid-column: 5/7;
+    grid-row: 4 / span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.diceBtn{
+    height: 80%;
+    width: 45%;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    font-size: 32pt;
+}
+
+.playerCard{
+    /* width: 100%;
+    height: 100%; */
+    grid-column: 2/ 4;
+    grid-row: 3 / span 7 ;
+    border-radius: 25px;
+    background-color: #242322;
+    position: relative;
+    border: 6px inset #242322;
+    box-sizing: border-box;
+    padding:10px;
+}
+
+
+.playerHealth, .playerAC, .playerStr, .playerDex, .playerInt, .playerVit, .enemyHP, .enemyAC{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.playerCard2{
+    /* width: 100%;
+    height: 100%; */
+    grid-column: 2/ 4;
+    grid-row: 3 / span 7 ;
+    border-radius: 25px;
+    background-color: #242322;
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
+    visibility: hidden;
+    padding:20px;
+}
+
+
+
+
+
+.enemyCard{
+    /* width: 100%;
+    height: 100%; */
+    grid-column: 8/ 10;
+    grid-row: 2 / span 7 ;
+    border-radius: 25px;
+    background-color: red;
+    position: relative;
+    border: 6px inset #242322;
+    box-sizing: border-box;
+    padding:10px;
+
+}
+
+.enemyCard2{
+    /* width: 100%;
+    height: 100%; */
+    grid-column: 8/ 10;
+    grid-row: 2 / span 7 ;
+    border-radius: 25px;
+    background-color: red;
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
+    visibility: hidden;
+    padding:10px;
+
+}
+
+.counter-container{
+    display: flex;
+    gap: 10px;
+    margin-left:5px;
+}
+
+.newRound-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 5/7;
+    grid-row: 8 / span 1;
+}
+
+.reset-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 5/7;
+    grid-row: 9 / span 1;
+}
+
+
+.turnContainer{
+    grid-column: 5/7;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+}
+
+
+
