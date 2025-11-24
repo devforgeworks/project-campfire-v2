@@ -235,13 +235,13 @@ function playerAttack(){
     
     
     
-    var hitRoll = diceRoll(20,20) + bonuses().dexBonus;
+    var hitRoll = diceRoll(1,20) + bonuses().dexBonus;
     
 
     if (hitRoll>=enemyAC){
         
 
-        var attackRoll = d8roll(8, 8) + bonuses().strBonus;
+        var attackRoll = d8roll(1, 8) + bonuses().strBonus;
         enemyHP = enemyHP - attackRoll;
 
         eHp.innerText = enemyHP;
@@ -379,4 +379,5 @@ eCardFlip1.onclick = function(){
 
 eCardFlip2.onclick = function(){
     enemyCard2.style.visibility = "hidden";
+
 }
