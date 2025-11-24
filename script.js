@@ -76,6 +76,7 @@ eAc.innerText = enemyAC;
 let comLogQeue = [];
 let isWriting = false;
 xhealSpell.disabled = true;
+xhealSpell.style.opacity = 0.2;
 
 roundCount.innerText = round;
 pHp.innerText = playerHP;
@@ -202,7 +203,8 @@ dice.onclick = function(){
     spellCount ++;
 
     if(spellCount === 5){
-        setTimeout(() => {xhealSpell.disabled=false;},2006 );
+        setTimeout(() => {xhealSpell.disabled=false;},2006);
+        setTimeout(() => {xhealSpell.style.opacity=1;},2006);
         // xhealSpell.disabled = false;
         
     }
@@ -290,7 +292,7 @@ function playerDead(){
 
     pHp.innerText = "You died..."
     dice.disabled = true;
-    dice.style.opacity = 0.5;
+    dice.style.opacity = 0.2;
     resBtn.style.visibility ="visible";   
 }
 
@@ -303,7 +305,7 @@ function enemyDead(){
 
     eHp.innerText = "The enemy is defeated!"
     dice.disabled = true;
-    dice.style.opacity = 0.5;
+    dice.style.opacity = 0.2;
 
     newRound.style.visibility = "visible"
     dice.disabled = false;
@@ -324,7 +326,7 @@ function enemyDead(){
 
 
 var eHPinc = 3;
-var eACinc = 3;
+var eACinc = 2;
 
 function HPINC(){
     eHPbase = 10;
@@ -381,3 +383,4 @@ eCardFlip2.onclick = function(){
     enemyCard2.style.visibility = "hidden";
 
 }
+
