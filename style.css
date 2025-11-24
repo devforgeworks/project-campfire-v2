@@ -19,14 +19,15 @@ body {
 }
 
 .windowWrapper {
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     background-color: #050505;
     justify-content: flex-start;
     align-items: center;
-    padding: 20px 10px;
+    padding: 10px;
+    overflow: hidden;
 }
 
 .windowWrapper h1 {
@@ -40,36 +41,38 @@ body {
 .windowWrapper > p {
     max-width: 900px;
     text-align: center;
-    margin: 10px 20px;
-    font-size: clamp(0.85rem, 2vw, 1rem);
-    line-height: 1.6;
+    margin: 5px 20px;
+    font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+    line-height: 1.4;
 }
 
 .gameWrapper {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
+    height: calc(100vh - 120px);
     background-color: #151412;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
     border: 4px solid #8C4E22;
     overflow: hidden;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .gameWindow {
     width: 100%;
-    min-height: 500px;
+    height: 65%;
     background-color: #151412;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
     gap: 10px;
-    padding: 20px;
+    padding: 15px;
 }
 
 .barWrapper {
     width: 100%;
+    height: 35%;
     display: flex;
     flex-direction: row;
     border-top: 3px solid #8C4E22;
@@ -83,7 +86,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     padding: 15px;
-    min-height: 200px;
+    overflow-y: auto;
 }
 
 .items, .spells {
@@ -197,14 +200,15 @@ body {
 
 /* Cards */
 .playerCard {
-    grid-column: 2 / 4;
-    grid-row: 3 / span 7;
+    grid-column: 1 / 5;
+    grid-row: 2 / span 8;
     border-radius: 15px;
     background: linear-gradient(135deg, #242322, #151412);
     position: relative;
     border: 4px solid #8C4E22;
-    padding: 15px;
+    padding: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
 }
 
 .playerCard1, .playerCard2 {
@@ -220,18 +224,19 @@ body {
     visibility: hidden;
     background: linear-gradient(135deg, #242322, #151412);
     border-radius: 15px;
-    padding: 15px;
+    padding: 12px;
 }
 
 .enemyCard {
-    grid-column: 8 / 10;
-    grid-row: 2 / span 7;
+    grid-column: 7 / 11;
+    grid-row: 2 / span 8;
     border-radius: 15px;
     background: linear-gradient(135deg, #8B0000, #5a0000);
     position: relative;
     border: 4px solid #FF6347;
-    padding: 15px;
+    padding: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
 }
 
 .enemyCard1, .enemyCard2 {
@@ -247,14 +252,14 @@ body {
     visibility: hidden;
     background: linear-gradient(135deg, #8B0000, #5a0000);
     border-radius: 15px;
-    padding: 15px;
+    padding: 12px;
 }
 
 .name {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: #F2F4F3;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -262,7 +267,7 @@ body {
 .playerMainStats, .enemyMainStats {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
     flex: 1;
     justify-content: center;
 }
@@ -273,9 +278,9 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.3);
-    padding: 8px 12px;
+    padding: 6px 10px;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: bold;
 }
 
@@ -291,17 +296,18 @@ body {
 
 /* Buttons */
 .btn {
-    padding: 10px 20px;
+    padding: 8px 16px;
     background: linear-gradient(135deg, #8C4E22, #6a3a1a);
     color: #F2F4F3;
     border: 2px solid #F2F4F3;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
     text-transform: uppercase;
+    margin-top: 8px;
 }
 
 .btn:hover {
